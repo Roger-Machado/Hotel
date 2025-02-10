@@ -1,0 +1,150 @@
+.header {
+  background-color: #03716e;
+  color: white;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.menu-toggle {
+  display: flex;
+  justify-content: flex-end; /* Alinha o ícone do hambúrguer à direita */
+  align-items: center;
+  position: absolute;
+  left: 150px;
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-100%);
+}
+
+nav {
+  position: relative;
+  left: -50px; /* Move a navegação para a esquerda */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+ 
+}
+
+nav a {
+  color: white;
+    text-decoration: none;
+    font-size: 20px; /* Tamanho maior para os itens */
+    font-weight: 600; /* Fonte mais ousada */
+    padding: 10px;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  color: black;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px; /* Ajusta a largura com base na imagem */
+  height: 30px; /* Define a altura para a logo, sem ultrapassar a header */
+  flex-grow: 0;
+}
+
+.logo {
+  height: 120px; /* Faz a logo ocupar toda a altura da logo-container */
+  width: auto; /* Ajusta automaticamente a largura mantendo a proporção */
+  object-fit: cover;
+}
+
+.active {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  height: 250px;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 1024px) {
+  .header {
+    padding: 40px;
+  }
+
+  .logo-container img {
+    width: auto;
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 110px;
+    left: 0;
+    transform: translateY(-50%) translateX(-10%);
+    background-color: rgba(3, 113, 110, 0.9);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px; /* Tamanho maior para os itens */
+    font-weight: 600; /* Fonte mais ousada */
+    padding: 10px;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    left: 220px;
+  }
+
+  .menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+  }
+
+  .logo-container img {
+    width: auto;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 60px;
+  }
+
+  .logo-container img {
+    width: auto;
+    height: 180px;
+  }
+
+  .menu-toggle {
+    left: 175px;
+  }
+}
