@@ -11,12 +11,15 @@ export default function Header() {
   };
 
   return (
-    <header className="header">
+    <header className="header relative">
       <div className="logo-container">
         <Logo />
       </div>
       <nav>
-        <button className="menu-toggle" onClick={toggleMenu}>
+        <button
+          className="menu-toggle z-20 absolute mt-[-10px]"
+          onClick={toggleMenu}
+        >
           <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>

@@ -1,5 +1,5 @@
 .header {
-  background-color: #03716e;
+  background-color: #000000;
   color: white;
   padding: 30px;
   display: flex;
@@ -28,21 +28,20 @@ nav ul {
   display: flex;
   gap: 25px;
   align-items: center;
- 
 }
 
 nav a {
   color: white;
-    text-decoration: none;
-    font-size: 20px; /* Tamanho maior para os itens */
-    font-weight: 600; /* Fonte mais ousada */
-    padding: 10px;
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  font-size: 20px; /* Tamanho maior para os itens */
+  font-weight: 600; /* Fonte mais ousada */
+  padding: 10px;
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-  color: black;
+  color: #03716e;
 }
 
 .logo-container {
